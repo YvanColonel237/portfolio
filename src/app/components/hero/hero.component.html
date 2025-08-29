@@ -1,0 +1,40 @@
+<section id="hero" class="hero valign-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel transparent z-depth-0">
+          <div class="center-align">
+            <img src="assets/IMG_20250525_084706_041.jpg"
+                 alt="Yvan Darel - Développeur Full Stack"
+                 class="circle responsive-img"
+                 width="150"
+                 onerror="this.src='assets/placeholder-profile.jpg'">
+          </div>
+
+          <h1 class="center-align white-text">Yvan Darel</h1>
+
+          <h4 class="center-align typewriter">
+            Je suis <span class="blue-text">{{ currentWord }}</span>
+            <span class="cursor">|</span>
+          </h4>
+
+          <div class="center-align button-container">
+            <!-- Bouton Voir mes projets -->
+            <a class="waves-effect waves-light btn blue custom-btn"
+               (click)="scrollToSection('projects')">
+              <span class="btn-icon">→</span>
+              Voir mes projets
+            </a>
+
+            <!-- Bouton Me contacter -->
+            <a class="waves-effect waves-light btn transparent white-text border-white custom-btn"
+               (click)="scrollToSection('contact')">
+              <span class="btn-icon">✉</span>
+              Me contacter
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

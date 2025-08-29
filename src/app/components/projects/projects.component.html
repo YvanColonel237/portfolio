@@ -1,0 +1,98 @@
+<section id="projects" class="section indigo lighten-5">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 center-align">
+        <h2 class="section-title indigo-text text-darken-3">Mes Projets</h2>
+        <div class="divider indigo"></div>
+        <p class="flow-text grey-text text-darken-2">
+          Découvrez mes réalisations et compétences techniques
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Projet 1 -->
+      <div class="col s12 m6 l4" *ngFor="let project of projects">
+        <div class="card hoverable project-card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img [src]="project.image" [alt]="project.title" class="activator project-image"
+                 (error)="handleImageError($event, project)">
+            <span class="card-title activator white-text project-overlay-title">
+              {{ project.title }}
+            </span>
+          </div>
+
+          <div class="card-content">
+            <div class="project-header">
+              <span class="card-title activator grey-text text-darken-4 project-main-title">
+                {{ project.title }}
+                <i class="material-icons right indigo-text">more_vert</i>
+              </span>
+            </div>
+
+            <div class="chips-container">
+              <div class="chip indigo white-text" *ngFor="let tech of project.technologies">
+                {{ tech }}
+              </div>
+            </div>
+          </div>
+
+          <div class="card-action">
+            <a [href]="project.githubUrl" target="_blank" class="indigo-text text-darken-3 project-link">
+              <i class="material-icons left">code</i> Code Source
+            </a>
+            <a [href]="project.demoUrl || '#'" target="_blank"
+               class="indigo-text text-darken-3 project-link"
+               *ngIf="project.demoUrl">
+              <i class="material-icons left">visibility</i> Live Demo
+            </a>
+          </div>
+
+          <div class="card-reveal indigo lighten-5">
+            <span class="card-title indigo-text text-darken-3">
+              {{ project.title }}
+              <i class="material-icons right">close</i>
+            </span>
+            <p class="project-description grey-text text-darken-3">
+              {{ project.description }}
+            </p>
+            <div class="project-technologies">
+              <h6 class="indigo-text text-darken-2">Technologies utilisées :</h6>
+              <div class="chips-container">
+                <div class="chip indigo white-text" *ngFor="let tech of project.technologies">
+                  {{ tech }}
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions-reveal">
+              <a [href]="project.githubUrl" target="_blank"
+                 class="btn indigo waves-effect waves-light">
+                <i class="material-icons left">code</i> Voir le code
+              </a>
+              <a [href]="project.demoUrl || '#'" target="_blank"
+                 class="btn white indigo-text waves-effect" *ngIf="project.demoUrl"
+                 style="margin-left: 10px;">
+                <i class="material-icons left">play_arrow</i> Voir la demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <div class="card-panel indigo lighten-4 z-depth-1">
+          <h5 class="indigo-text text-darken-3">Vous avez un projet en tête ?</h5>
+          <p class="flow-text indigo-text">Discutons de comment je peux vous aider à le réaliser</p>
+          <a (click)="scrollToSection('contact')" class="btn indigo waves-effect waves-light">
+            <i class="material-icons right">email</i>
+            Me contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

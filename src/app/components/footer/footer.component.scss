@@ -1,0 +1,188 @@
+.page-footer {
+  padding: 40px 0 0 0;
+
+  h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+
+  .footer-description {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-size: 1rem;
+  }
+}
+
+// Réseaux sociaux
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    i {
+      font-size: 1.3rem;
+    }
+
+    // Couleurs au hover selon le réseau
+    &[aria-label="GitHub"]:hover {
+      background: #333;
+      border-color: #333;
+    }
+
+    &[aria-label="LinkedIn"]:hover {
+      background: #0077b5;
+      border-color: #0077b5;
+    }
+
+    &[aria-label="Twitter"]:hover {
+      background: #1da1f2;
+      border-color: #1da1f2;
+    }
+
+    &[aria-label="Email"]:hover {
+      background: #ea4335;
+      border-color: #ea4335;
+    }
+  }
+}
+
+// Liens de navigation
+.footer-links {
+  li {
+    margin-bottom: 12px;
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+// Informations de contact
+.contact-info {
+  li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+
+    i {
+      margin-right: 12px;
+      width: 20px;
+      text-align: center;
+      color: #64b5f6;
+    }
+
+    a, span {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+// Copyright
+.footer-copyright {
+  padding: 20px 0;
+  margin-top: 30px;
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  .made-with {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    i {
+      font-size: 1.1rem;
+      margin: 0 2px;
+
+      &.red-text {
+        color: #f44336 !important;
+      }
+    }
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 992px) {
+  .page-footer {
+    .container .row {
+      .col {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-footer {
+    padding: 30px 0 0 0;
+
+    h5 {
+      font-size: 1.2rem;
+    }
+
+    .social-links {
+      justify-content: center;
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+
+        i {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .footer-copyright {
+      text-align: center;
+
+      .right-align {
+        text-align: center !important;
+        margin-top: 10px;
+      }
+    }
+  }
+}

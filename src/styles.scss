@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+// Variables personnalisées
+$primary-blue: #2196F3;
+$secondary-orange: #FF9800;
+$dark-gray: #333;
+$light-gray: #f5f5f5;
+
+// Override Materialize
+$primary-color: $primary-blue;
+$secondary-color: $secondary-orange;
+
+
+// Styles globaux
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.divider {
+  width: 100px;
+  height: 3px;
+  margin: 0 auto 40px auto;
+  background-color: $primary-blue;
+}
+
+// Responsive
+@media only screen and (max-width: 600px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

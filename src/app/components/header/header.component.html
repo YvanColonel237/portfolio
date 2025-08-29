@@ -1,0 +1,40 @@
+<nav class="blue darken-2">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a (click)="scrollToSection('hero', $event)" class="brand-logo cursor-pointer">
+        MonPortfolio
+      </a>
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger" (click)="$event.preventDefault()">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a (click)="scrollToSection('about', $event)" class="cursor-pointer">À propos</a></li>
+        <li><a (click)="scrollToSection('projects', $event)" class="cursor-pointer">Projets</a></li>
+        <li><a (click)="scrollToSection('contact', $event)" class="cursor-pointer">Contact</a></li>
+        <li>
+          <a href="assets/CV Yvan Darel.pdf" download class="waves-effect waves-light btn orange">
+            <i class="material-icons left">file_download</i>CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-menu">
+  <li>
+    <div class="user-view">
+      <div class="background blue"></div>
+      <img src="assets/IMG_20250525_084706_041.jpg" alt="Profile" class="circle"
+           onerror="this.src='assets/placeholder.jpg'">
+    </div>
+  </li>
+  <li><a (click)="scrollToSection('about', $event)" class="cursor-pointer">À propos</a></li>
+  <li><a (click)="scrollToSection('projects', $event)" class="cursor-pointer">Projets</a></li>
+  <li><a (click)="scrollToSection('contact', $event)" class="cursor-pointer">Contact</a></li>
+  <li>
+    <a href="assets/CV Yvan Darel.pdf" download class="waves-effect waves-orange">
+      <i class="material-icons">file_download</i>Télécharger mon CV
+    </a>
+  </li>
+</ul>
