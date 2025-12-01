@@ -11,6 +11,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     'Développeur Angular',
     'Développeur Java/Spring Boot',
     'Passionné de Docker',
+    'Passionné de MYSQL',
     'Développeur Full Stack'
   ];
 
